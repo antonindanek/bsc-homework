@@ -1,0 +1,29 @@
+to compile and package into executable jar:
+mvn package
+
+to execute the application:
+java -jar bsc-homework-0.0.1-SNAPSHOT.jar <optional_path_to_file>
+
+example:
+C:\Users\Tonda\eclipse-workspace\bsc-homework\target>java -jar bsc-homework-0.0.1-SNAPSHOT.jar C:\Users\Tonda\eclipse-workspace\bsc-homework\src\main\resources\input
+2020-02-01 14:27:04,913 [main] INFO  homework.Main - Welcome to Antonin's homework for .BSC
+Please provide input with format: '<currency> <amount>' e.g. USD 1000
+2020-02-01 14:27:04,923 [Thread-0] INFO  homework.data.MemoryStorage - New payment saved: US Dollar 1000
+2020-02-01 14:27:04,923 [Thread-0] INFO  homework.data.MemoryStorage - New payment saved: Hong Kong Dollar 100
+2020-02-01 14:27:04,924 [Thread-0] INFO  homework.data.MemoryStorage - New payment saved: US Dollar -100
+2020-02-01 14:27:04,925 [Thread-0] INFO  homework.data.MemoryStorage - New payment saved: Chinese Yuan 2000
+2020-02-01 14:27:04,926 [Thread-0] INFO  homework.data.MemoryStorage - New payment saved: Hong Kong Dollar 200
+usd 1000
+2020-02-01 14:27:10,255 [Thread-1] INFO  homework.data.MemoryStorage - New payment saved: US Dollar 1000
+|------|
+HKD 300
+CNY 2000
+USD 1900
+|------|
+
+assumptions:
+
+I've started with whole numbers (integers) for the amounts since it hasn't really been specified except for "Think about these payments in the same way, you have them on your bank account."
+Hope it doesn't matter
+
+
