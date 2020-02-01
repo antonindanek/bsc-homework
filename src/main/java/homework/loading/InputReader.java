@@ -5,6 +5,7 @@ import java.util.Scanner;
 
 import org.apache.log4j.Logger;
 
+import homework.configuration.ConfigReader;
 import homework.data.Storage;
 import homework.data.parser.AmountParser;
 import homework.data.parser.CurrencyParser;
@@ -31,6 +32,11 @@ public abstract class InputReader extends Thread {
 
 		String[] inputArr = input.trim().split(" ");
 
+		if (inputArr.length == 1 && inputArr[0].equals(ConfigReader.getQuitKeyword())) {
+			log.info("Exiting program");
+			System.exit(0);
+		}
+		
 		if (inputArr.length != 2) {
 			log.error(PROMPT_MESSAGE);
 			return;

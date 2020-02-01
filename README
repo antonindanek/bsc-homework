@@ -26,4 +26,4 @@ assumptions:
 I've started with whole numbers (integers) for the amounts since it hasn't really been specified except for "Think about these payments in the same way, you have them on your bank account."
 Hope it doesn't matter
 
-
+'quit' will also work inside the file - to exit the program.

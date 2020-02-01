@@ -24,5 +24,9 @@ public class ConfigReader {
 	public static int waitBetweenPrintsMillis() {
 		return Integer.parseInt((String) configuration.getOrDefault("wait.between.prints.seconds", 5 + "")) * 1000;
 	}
+	
+	public static String getQuitKeyword() {
+		return (String) configuration.getOrDefault("quit.keyword", "quit");
+	}
 
 }
