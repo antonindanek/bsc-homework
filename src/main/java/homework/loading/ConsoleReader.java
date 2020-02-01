@@ -13,7 +13,7 @@ public class ConsoleReader extends InputReader {
     @Override
     public void run() {
 
-        System.out.println(message);
+        System.out.println(PROMPT_MESSAGE);
 
         try (Scanner sc = new Scanner(System.in)) {
 

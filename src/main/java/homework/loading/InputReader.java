@@ -11,7 +11,7 @@ import homework.data.parser.CurrencyParser;
 
 public abstract class InputReader extends Thread {
 
-	protected static final String message = "Please provide input with format: '<currency> <amount>' e.g. USD 1000";
+	protected static final String PROMPT_MESSAGE = "Please provide input with format: '<currency> <amount>' e.g. USD 1000";
 
 	private static final Logger log = Logger.getLogger(InputReader.class);
 
@@ -32,7 +32,7 @@ public abstract class InputReader extends Thread {
 		String[] inputArr = input.trim().split(" ");
 
 		if (inputArr.length != 2) {
-			log.error(message);
+			log.error(PROMPT_MESSAGE);
 			return;
 		}
 
@@ -40,7 +40,7 @@ public abstract class InputReader extends Thread {
 		Integer parsedAmount = amountParser.parse(inputArr[1]);
 
 		if (parsedCurrency == null || parsedAmount == null) {
-			log.error(message);
+			log.error(PROMPT_MESSAGE);
 			return;
 		}
 
