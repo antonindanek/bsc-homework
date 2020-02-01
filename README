@@ -27,3 +27,6 @@ I've started with whole numbers (integers) for the amounts since it hasn't reall
 Hope it doesn't matter
 
 'quit' will also work inside the file - to exit the program.
+
+To implements conversion to USD, I'd probably implements another processor such as SumProcessor.java. I'd find a service with exchange rates which should probably be cached for some time.
+Hope just a base version of this homework is ok as I do like to spend my time on real things.
